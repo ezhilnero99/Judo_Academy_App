@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "106652513393",
+    "firebase_url": "https://judo-academy.firebaseio.com",
+    "project_id": "judo-academy",
+    "storage_bucket": "judo-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106652513393:android:afcaca0ab174c7778e97d0",
+        "android_client_info": {
+          "package_name": "com.example.judoacademy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106652513393-36lldpctlq8ijdkoj46s4dltgijfcsd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE1qN6pLz0vkg8bJN4FPMj_c7ytRfw36Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106652513393-36lldpctlq8ijdkoj46s4dltgijfcsd7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
