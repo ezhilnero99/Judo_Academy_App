@@ -9,19 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.JudoAcademy">
-        <activity android:name=".AddNotesActivity"></activity>
-        <activity android:name=".NotesActivity" />
-        <activity android:name=".AttendanceDetailActivity" />
-        <activity android:name=".VerificationActivity" />
-        <activity android:name=".StudentDetailsActivity" />
-        <activity android:name=".AttendanceActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".CoachActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AddNotesActivity" />
+        <activity android:name=".NotesActivity" />
+        <activity android:name=".AttendanceDetailActivity" />
+        <activity android:name=".VerificationActivity" />
+        <activity android:name=".StudentDetailsActivity" />
+        <activity android:name=".AttendanceActivity" />
+        <activity android:name=".AdminActivity" />
     </application>
 
 </manifest>

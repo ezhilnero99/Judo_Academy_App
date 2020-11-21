@@ -5,7 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".AdminActivity">
+
+    <ImageView
+        android:id="@+id/logoutIV"
+        android:layout_width="@dimen/_23sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:tint="@color/dark_blue"
+        app:srcCompat="@drawable/signout"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"/>
 
 
     <TextView
@@ -21,14 +31,16 @@
 
     <ImageView
         android:id="@+id/infoIV"
-        android:layout_width="@dimen/_23sdp"
-        android:layout_height="@dimen/_24sdp"
+        android:layout_width="@dimen/_43sdp"
+        android:layout_height="@dimen/_34sdp"
         app:srcCompat="@drawable/info"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
         android:tint="@color/dark_blue"
         android:scaleType="fitXY"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/_10sdp"/>
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_alignParentRight="true"/>
 
 
     <LinearLayout

@@ -19,6 +19,14 @@ public class Comms {
     public static final String time = "time";
     public static final String dayofweek = "dayofweek";
     public static final String attendance = "attendance";
+    public static final String studentId = "id";
+    public static final String number = "number";
+
+    public static final String clearance = "clearance";
+    public static final String category = "category";
+    public static final String email = "email";
+    public static final String key = "key";
+
     public static final String title = "title";
     public static final String content = "content";
 

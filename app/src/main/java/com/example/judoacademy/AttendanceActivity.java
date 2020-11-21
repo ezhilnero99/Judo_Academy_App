@@ -159,6 +159,7 @@ public class AttendanceActivity extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull final FeedViewHolder holder, int i, @NonNull final Students post) {
                 holder.nameTV.setText(post.getName());
                 holder.ageTV.setText(post.getAge());
+                holder.idTV.setText(post.getId());
                 holder.attendanceTV.setOnClickListener(new View.OnClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.N)
                     @Override
@@ -201,12 +202,13 @@ public class AttendanceActivity extends AppCompatActivity {
 
     public class FeedViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nameTV, ageTV, attendanceTV;
+        TextView idTV, nameTV, ageTV, attendanceTV;
 
 
         public FeedViewHolder(View itemView) {
             super(itemView);
             nameTV = itemView.findViewById(R.id.nameTV);
+            idTV = itemView.findViewById(R.id.idTV);
             ageTV = itemView.findViewById(R.id.ageTV);
             attendanceTV = itemView.findViewById(R.id.attendanceTV);
 

@@ -26,13 +26,41 @@
         android:textSize="@dimen/_18sdp"
         android:textStyle="bold" />
 
+    <RelativeLayout
+        android:id="@+id/dateRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTV"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/rectangle_white"
+        android:backgroundTint="@color/pale_blue">
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:text="Date"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_16sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/_15sdp"
+            app:srcCompat="@drawable/calender" />
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/detailsRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/titleTV"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        />
+        android:layout_below="@id/dateRL"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp" />
 
 </RelativeLayout>

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.judoacademy.Adapter.DetailsAdapter;
@@ -31,6 +32,7 @@ import java.util.Map;
 public class AttendanceDetailActivity extends AppCompatActivity {
 
     ImageView backIV;
+    TextView dateTV;
     RecyclerView detailsRV;
     DetailsAdapter adapter;
     ArrayList<Details> detailsAL = new ArrayList<>();
@@ -51,6 +53,7 @@ public class AttendanceDetailActivity extends AppCompatActivity {
         String time = intent.getStringExtra(Comms.time);
 
         Log.i(TAG, "onCreate: "+date+"   "+time);
+        dateTV.setText(date+ " "+time);
 
         backIV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +94,7 @@ public class AttendanceDetailActivity extends AppCompatActivity {
     }
 
     private void initUI() {
+        dateTV = findViewById(R.id.dateTV);
         backIV = findViewById(R.id.backIV);
         detailsRV = findViewById(R.id.detailsRV);
         detailsRV.setLayoutManager(new LinearLayoutManager(this));

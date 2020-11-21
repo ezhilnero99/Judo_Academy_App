@@ -24,67 +24,100 @@
         android:textSize="@dimen/_18sdp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_below="@id/titleTV"
-        android:layout_marginLeft="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_20sdp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/nameET"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:hint="Name" />
+            android:layout_marginRight="@dimen/_20sdp"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/fatherET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:hint="Father Name" />
+            <EditText
+                android:id="@+id/nameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Name" />
 
-        <Spinner
-            android:id="@+id/genderSP"
+            <EditText
+                android:id="@+id/idET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Student ID" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp" />
+            <EditText
+                android:id="@+id/fatherET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Father Name" />
 
-        <EditText
-            android:id="@+id/ageET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:hint="Age" />
+            <EditText
+                android:id="@+id/genderET"
+                android:hint="Gender (m/f)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp" />
 
-        <EditText
-            android:id="@+id/weightET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:hint="Weight" />
+            <EditText
+                android:id="@+id/ageET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Age" />
 
-        <EditText
-            android:id="@+id/heightET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:hint="Height" />
+            <EditText
+                android:id="@+id/heightET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Height" />
 
-        <Button
-            android:id="@+id/submitBT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/rectangle_white"
-            android:backgroundTint="@color/pale_blue"
-            android:text="SUBMIT"
-            android:textColor="@color/dark_blue" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/weightET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Weight" />
 
+            <EditText
+                android:id="@+id/categoryET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Category" />
 
+            <EditText
+                android:id="@+id/numberET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Phone Number" />
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Email" />
+
+            <Button
+                android:layout_marginBottom="@dimen/_300sdp"
+                android:id="@+id/submitBT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rectangle_white"
+                android:backgroundTint="@color/pale_blue"
+                android:text="SUBMIT"
+                android:textColor="@color/dark_blue" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

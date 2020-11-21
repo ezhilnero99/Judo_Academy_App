@@ -26,12 +26,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StudentDetailsActivity extends AppCompatActivity {
-    EditText nameET, fatherET, ageET, weightET, heightET;
-    Spinner genderSP;
+    EditText nameET, idET, fatherET, ageET, weightET, heightET, categoryET, numberET, emailET;
+    EditText genderET;
     Button submitBT;
     ImageView backIV;
-    ArrayAdapter<String> adapter;
-    ArrayList<String> genderAL = new ArrayList<>();
     private static final String TAG = "studentsTest";
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -60,17 +58,28 @@ public class StudentDetailsActivity extends AppCompatActivity {
                 String father = fatherET.getText().toString();
                 String weight = weightET.getText().toString();
                 String height = heightET.getText().toString();
-                String gender = genderSP.getSelectedItem().toString();
+                String gender = genderET.getText().toString();
+                String studentId = idET.getText().toString();
+                String category = categoryET.getText().toString();
+                String number = numberET.getText().toString();
+                String email = emailET.getText().toString();
                 if(name.isEmpty()
                         || age.isEmpty()
                         || father.isEmpty()
                         || weight.isEmpty()
                         || height.isEmpty()
+                        || studentId.isEmpty()
+                        || category.isEmpty()
+                        || number.isEmpty()
+                        || email.isEmpty()
                         || gender.isEmpty()
                         || gender.equals("Pick A Gender:")){
                     Toast.makeText(StudentDetailsActivity.this, "X EMPTY FIELD X", Toast.LENGTH_LONG).show();
-                }
-                else{
+                }else if(number.length()!=10){
+                    Toast.makeText(StudentDetailsActivity.this, "Invalid Phone Number", Toast.LENGTH_LONG).show();
+                }else if(!email.contains("@")) {
+                    Toast.makeText(StudentDetailsActivity.this, "Invalid Email", Toast.LENGTH_LONG).show();
+                }else{
                     Map<String,String> tempObject= new HashMap<>();
                     tempObject.put(Comms.name,name);
                     tempObject.put(Comms.father,father);
@@ -78,6 +87,10 @@ public class StudentDetailsActivity extends AppCompatActivity {
                     tempObject.put(Comms.gender,gender);
                     tempObject.put(Comms.weight,weight);
                     tempObject.put(Comms.height,height);
+                    tempObject.put(Comms.studentId,studentId);
+                    tempObject.put(Comms.category,category);
+                    tempObject.put(Comms.number,number);
+                    tempObject.put(Comms.email,email);
 
                     studentsCollection.add(tempObject).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                         @Override
@@ -107,16 +120,12 @@ public class StudentDetailsActivity extends AppCompatActivity {
         ageET = findViewById(R.id.ageET);
         weightET = findViewById(R.id.weightET);
         heightET = findViewById(R.id.heightET);
-        genderSP = findViewById(R.id.genderSP);
+        idET = findViewById(R.id.idET);
+        categoryET = findViewById(R.id.categoryET);
+        numberET = findViewById(R.id.numberET);
+        emailET = findViewById(R.id.emailET);
+        genderET = findViewById(R.id.genderET);
         submitBT = findViewById(R.id.submitBT);
-
-        genderAL.add("Pick A Gender:");
-        genderAL.add("male");
-        genderAL.add("female");
-
-        adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, genderAL);
-
-        genderSP.setAdapter(adapter);
 
     }
 

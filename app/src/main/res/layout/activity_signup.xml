@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignupActivity">
+
+
+    <ImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:src="@drawable/sparkles" />
+
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:text="SignUp"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="Enter User credentials"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_15sdp" />
+
+        <EditText
+            android:id="@+id/keyET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="#00000000"
+            android:hint="User Key"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="italic" />
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/emailET"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@color/pale_blue" />
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="#00000000"
+            android:hint="Email"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="italic" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/emailET"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@color/pale_blue" />
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="#00000000"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="italic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/passwordET"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@color/pale_blue" />
+        
+        <EditText
+            android:id="@+id/passcheckET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="#00000000"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="italic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/passcheckET"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@color/pale_blue" />
+
+
+        <Button
+            android:id="@+id/submitBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rectangle_white"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/progressIV"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/pale_blue"
+        android:src="@drawable/judo_1"
+        android:visibility="gone" />
+    
+</RelativeLayout>
